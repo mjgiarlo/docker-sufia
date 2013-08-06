@@ -8,6 +8,7 @@ Installation
 
 1. Install [Docker](http://www.docker.io/gettingstarted/)
 1. Clone this repository
+1. Change into the source directory: `cd docker-scholarsphere`
 1. Build the container: `docker build -t <yourname>/scholarsphere .`
 1. Run ScholarSphere: `docker run -d <yourname>/scholarsphere`
 1. View open ports via `docker ps` and note the port forwarding to 3000
