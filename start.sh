@@ -4,11 +4,11 @@ if [ ! -f /mysql-configured ]; then
     /usr/bin/mysqld_safe &
     sleep 10s
     MYSQL_PASSWORD=`pwgen -c -n -1 12`
-    AS_PASSWORD=`pwgen -c -n -1 12`
+    SS_PASSWORD=`pwgen -c -n -1 12`
     echo mysql root password: $MYSQL_PASSWORD
-    echo mysql archivesspace password: $AS_PASSWORD
+    echo mysql scholarsphere password: $SS_PASSWORD
     echo $MYSQL_PASSWORD > /mysql-root-pw.txt
-    echo $AS_PASSWORD > /mysql-aspace-pw.txt
+    echo $SS_PASSWORD > /mysql-sphere-pw.txt
     cat << ENDL >> /archivesspace/config/config.rb
 AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=archivesspace&password=$AS_PASSWORD&useUnicode=true&characterEncoding=UTF-8"
 ENDL
